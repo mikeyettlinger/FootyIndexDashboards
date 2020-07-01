@@ -1,3 +1,11 @@
-<div id="chart" class="portfolio-value">
 
-</div>
+<%= content_tag "div", id: "x-axis", data: {values: @xaxis} do %>
+  <%= @xaxis %>
+<% end %>
+
+<%= content_tag "div", id: "y-axis", data: {values: @yaxis} do %>
+  <%= @yaxis %>
+<% end %>
+
+
+<div id="chart">hello</div>

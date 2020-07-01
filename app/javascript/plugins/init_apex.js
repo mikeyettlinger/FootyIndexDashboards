@@ -1,22 +1,33 @@
 const initApex = () => {
+
+var ydata = document.getElementById('y-axis').innerText
+var ydataArray = ydata.slice(1, -1).split(', ').map(Number)
+
+var xdata = document.getElementById('x-axis').innerText
+var xdataArray = xdata.slice(1, -1).split(', ').map(Number)
+
+  // var data = document.getElementById('chart').innerHTML
+
   var options = {
     chart: {
-      type: 'line'
+      type: 'bar'
     },
     series: [
       {
-        name: 'sales',
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+        name: 'value',
+        data: ydataArray,
+        hideOverlappingLabels: true
       }
     ],
     xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+      categories: xdataArray,
+      hideOverlappingLabels: true
     }
   }
 
   var chart = new ApexCharts(document.querySelector('#chart'), options)
   chart.render()
-  console.log('hi')
+  console.log(ydataArray)
 }
 
 export {initApex}
