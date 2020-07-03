@@ -30,12 +30,13 @@ var xdataArray = document.getElementById('x-axis').dataset.values.slice(1, -1).s
       {
         name: 'value',
         data: ydataArray,
-        hideOverlappingLabels: true
       }
     ],
     xaxis: {
       categories: xdataArray,
-      hideOverlappingLabels: true
+      labels: {
+      show: false
+      }
     }
   }
 
