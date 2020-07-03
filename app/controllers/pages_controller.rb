@@ -15,15 +15,8 @@ def index
       @xaxis << row[0].to_f
       @yaxis << row[1].to_f
   end
-
-
-
-
   @xaxis
   @yaxis
-
-
-
   end
 
 end

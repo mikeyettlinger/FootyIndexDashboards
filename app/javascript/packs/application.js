@@ -11,7 +11,14 @@ require("channels")
 
 
 
+import 'bootstrap';
 import { initApex } from '../plugins/init_apex';
+import { initResize } from '../plugins/init_resize';
+import { initUtil } from '../plugins/init_util';
+import { initHover } from '../plugins/init_hover';
+
+
+
 
 
 
@@ -26,6 +33,9 @@ import { initApex } from '../plugins/init_apex';
 
 document.addEventListener('turbolinks:load', () => {
   initApex();
+  initResize();
+  initHover();
+  initUtil();
   // Call your functions here, e.g:
   // initSelect2();
 });

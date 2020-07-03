@@ -1,11 +1,18 @@
 
-<%= content_tag "div", id: "x-axis", data: {values: @xaxis} do %>
-  <%= @xaxis %>
-<% end %>
+<div class="background-card">
+  <div class="chart-title">
+    <h2>Profit Over Time</h2>
+  </div>
+  <hr class="card-title-line">
+  <div id="chart">
+    <%= content_tag "div", id: "x-axis", data: {values: @xaxis} do %>
+    <% @xaxis %>
+  <% end %>
 
-<%= content_tag "div", id: "y-axis", data: {values: @yaxis} do %>
-  <%= @yaxis %>
-<% end %>
+  <%= content_tag "div", id: "y-axis", data: {values: @yaxis} do %>
+    <% @yaxis %>
+  <% end %>
+  </div>
+</div>
 
 
-<div id="chart">hello</div>
