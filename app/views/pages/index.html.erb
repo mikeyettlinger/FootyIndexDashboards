@@ -1,17 +1,100 @@
-
-<div class="background-card">
-  <div class="chart-title">
-    <h2>Profit Over Time</h2>
+<div class="row">
+  <div class="column">
+    <div class="background-card">
+      <div id="chart">
+        <%= content_tag "div", id: "x-axis", data: {values: @xaxis} do %>
+        <% @xaxis %>
+      <% end %>
+      <%= content_tag "div", id: "y-axis", data: {values: @yaxis} do %>
+        <% @yaxis %>
+      <% end %>
+      </div>
+    </div>
   </div>
-  <hr class="card-title-line">
-  <div id="chart">
-    <%= content_tag "div", id: "x-axis", data: {values: @xaxis} do %>
-    <% @xaxis %>
-  <% end %>
-
-  <%= content_tag "div", id: "y-axis", data: {values: @yaxis} do %>
-    <% @yaxis %>
-  <% end %>
+  <div class="column">
+    <div class="flex-row">
+      <div class="background-card-small">
+        <div class="card-title">
+          <h2>Overview</h2>
+          <hr class="line">
+        </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th scope="row">Total Deposits</th>
+              <td>£1600</td>
+            </tr>
+            <tr>
+              <th scope="row">Total Profit</th>
+              <td>£2000</td>
+            </tr>
+            <tr>
+              <th scope="row">Total Dividends</th>
+              <td>£400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="background-card-small">
+        <div class="flex-column">
+          <div class="card-title">
+            <h2>Portfolio Value</h2>
+            <hr class="line">
+          </div>
+          <div class="portfolio-value">
+            <h3>£4,000</h3>
+          </div>
+          <div class="timescale-flexbox">
+            <div class="timescale-profit">
+              <h2>24HR</h2>
+              <h3>£40</h3>
+            </div>
+            <div class="timescale-profit">
+              <h2>MONTH</h2>
+              <h3>£700</h3>
+            </div>
+            <div class="timescale-profit">
+              <h2>ALL TIME</h2>
+              <h3>£4,000</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+      <div class="flex-row">
+        <div class="background-card-small">
+          <div class="card-title">
+            <h2>Biggest Risers</h2>
+            <hr class="line">
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Total Deposits</th>
+                <td>£1600</td>
+              </tr>
+              <tr>
+                <th scope="row">Total Profit</th>
+                <td>£2000</td>
+              </tr>
+              <tr>
+                <th scope="row">Total Dividends</th>
+                <td>£400</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="background-card-small">
+          <p>hi</p>
+        </div>
+      </div>
+    </div>
+  <div class="column">
+    <div class="background-card">
+      <div id="bar-chart"></div>
+    </div>
   </div>
 </div>
 

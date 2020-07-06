@@ -60,7 +60,7 @@ a {
 // main content
 .cd-main-content {
   @include breakpoint(md) {
-    padding-top: var(--cd-header-height);
+    padding-top: (var(--cd-header-height) - 10px);
     display: grid;
     grid-template-columns: var(--cd-sidebar-width) 1fr;
     min-height: 100vh;
@@ -390,6 +390,14 @@ a {
     .cd-side__sub-list, .cd-nav__sub-list { // hide sub nav on bigger devices (it's visible as menu on :hover)
       display: none;
     }
+  }
+}
+
+
+.cd-side__item :active {
+a {
+    box-shadow: inset 3px 0 0 var(--cd-color-2);
+    background-color: alpha(var(--cd-color-3), 0.05);
   }
 }
 
