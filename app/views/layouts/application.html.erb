@@ -8,7 +8,6 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="https://unpkg.com/codyhouse-framework/main/assets/js/util.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,55 +15,8 @@
 
   </head>
 
-  <header class="cd-main-header js-cd-main-header">
-     <div class="cd-logo-wrapper">
-        <a href="#0" class="cd-logo">
-          <%= image_tag "logo.png", style:"height:35px;" %>
-        </a>
-      </div>
 
-     <button class="reset cd-nav-trigger js-cd-nav-trigger" aria-label="Toggle menu"><span></span></button>
+   <body>
+     <%= yield %>
+   </body>
 
-     <ul class="cd-nav__list js-cd-nav__list">
-        <li class="cd-nav__item cd-nav__item--has-children cd-nav__item--account js-cd-item--has-children">
-           <a href="#0">
-              <i class="fas fa-user mr-2"></i>
-              <span>Account</span>
-           </a>
-
-           <ul class="cd-nav__sub-list">
-              <li class="cd-nav__sub-item"><a href="#0">My Account</a></li>
-              <li class="cd-nav__sub-item"><a href="#0">Log Out</a></li>
-              <!-- other list items here -->
-           </ul>
-        </li>
-      </ul>
-  </header> <!-- .cd-main-header -->
-
-  <main class="cd-main-content">
-     <nav class="cd-side-nav js-cd-side-nav">
-        <ul class="cd-side__list js-cd-side__list">
-          <li class="cd-side__label"><span>Main</span></li>
-          <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children"></li>
-          <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
-              <ul class="cd-side__sub-list">
-                <li><%= link_to "Dashboard", root_path, class: "cd-side-item"%></li>
-                <li><%= link_to "Portfolio", portfolio_path, class: "cd-side__sub-item"%></li>
-                 <!-- other list items here -->
-              </ul>
-          </li>
-
-          <!-- other list items here -->
-        </ul>
-
-        <!-- other unordered lists here -->
-      </nav>
-
-     <div class="cd-content-wrapper">
-        <!-- main content here -->
-     <body>
-       <%= yield %>
-     </body>
-     </div> <!-- .cd-content-wrapper -->
-  </main> <!-- .cd-main-content -->
-</html>

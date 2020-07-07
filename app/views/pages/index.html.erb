@@ -1,101 +1,191 @@
-<div class="row">
-  <div class="column">
-    <div class="background-card">
-      <div id="chart">
-        <%= content_tag "div", id: "x-axis", data: {values: @xaxis} do %>
-        <% @xaxis %>
-      <% end %>
-      <%= content_tag "div", id: "y-axis", data: {values: @yaxis} do %>
-        <% @yaxis %>
-      <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="flex-row">
-      <div class="background-card-small">
-        <div class="card-title">
-          <h2>Overview</h2>
-          <hr class="line">
-        </div>
-        <table class="table">
-          <tbody>
-            <tr>
-              <th scope="row">Total Deposits</th>
-              <td>£1600</td>
-            </tr>
-            <tr>
-              <th scope="row">Total Profit</th>
-              <td>£2000</td>
-            </tr>
-            <tr>
-              <th scope="row">Total Dividends</th>
-              <td>£400</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="background-card-small">
-        <div class="flex-column">
-          <div class="card-title">
-            <h2>Portfolio Value</h2>
-            <hr class="line">
-          </div>
-          <div class="portfolio-value">
-            <h3>£4,000</h3>
-          </div>
-          <div class="timescale-flexbox">
-            <div class="timescale-profit">
-              <h2>24HR</h2>
-              <h3>£40</h3>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Starter Page | Hyper - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- App css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+
+    </head>
+
+    <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu" id="left-side-bar">
+
+                <div class="slimscroll-menu" id="left-side-menu-container">
+
+                    <!-- LOGO -->
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="./public/images/logo.png" alt="" height="16" id="side-main-logo">
+                        </span>
+                        <span class="logo-sm">
+                            <img src="./public/images/logo_sm.png" alt="" height="16">
+                        </span>
+                    </a>
+
+                    <!--- Sidemenu -->
+                    <ul class="mt-3 metismenu side-nav" id="left-bar-menu">
+
+                        <li class="side-nav-title side-nav-item">Getting Started</li>
+
+                        <li class="side-nav-item">
+                            <a href="index.html" class="side-nav-link">
+                                <i class="dripicons-box"></i>
+                                <span> Introduction </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="pages-installation.html" class="side-nav-link">
+                                <i class="dripicons-scale"></i>
+                                <span>Getting Started </span>
+                            </a>
+                        </li>
+                        <li class="side-nav-title side-nav-item mt-2">Customization</li>
+
+                        <li class="side-nav-item">
+                            <a href="pages-themes.html" class="side-nav-link">
+                                <i class="dripicons-document-edit"></i>
+                                <span>Layout &amp; Themes</span>
+                            </a>
+                        </li>
+            <!--
+                        <li class="side-nav-item">
+                            <a href="pages-customization.html" class="side-nav-link">
+                                <i class="dripicons-document-edit"></i>
+                                <span>Customizing SCSS</span>
+                            </a>
+                        </li> -->
+
+                        <li class="side-nav-title side-nav-item mt-2">UI Components</li>
+
+                        <li class="side-nav-item">
+                            <a href="pages-demo-widget.html" class="side-nav-link">
+                                <i class="dripicons-document-edit"></i>
+                                <span>Widgets</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-title side-nav-item mt-2">Other</li>
+
+                        <li class="side-nav-item">
+                            <a href="pages-changelog.html" class="side-nav-link">
+                                <i class="dripicons-blog"></i>
+                                <span>Change log</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="pages-upgrade.html" class="side-nav-link">
+                                <i class="dripicons-checklist"></i>
+                                <span>Upgrade</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
             </div>
-            <div class="timescale-profit">
-              <h2>MONTH</h2>
-              <h3>£700</h3>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    <div class="navbar-custom">
+                        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                            <li class="notification-list topbar-dropdown d-lg-block">
+
+                            </li>
+
+                        </ul>
+                        <button class="button-menu-mobile open-left disable-btn">
+                            <i class="mdi mdi-menu" id="button-menu-mobile-toggle"></i>
+                        </button>
+
+                        <div class="app-search">
+                            <h4>Documentation <label class="badge badge-success float-right">v3.3</label></h4>
+                        </div>
+                    </div>
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                            <li class="breadcrumb-item active">Starter</li>
+                                        </ol>
+                                    </div>
+                                    <h4 class="page-title">Starter</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title -->
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                2018 - 2020 © Hyper - Coderthemes.com
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-md-block">
+                                    <a href="https://coderthemes.com/" target="_blank">About</a>
+                                    <a href="https://coderthemes.com/" target="_blank">Support</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
             </div>
-            <div class="timescale-profit">
-              <h2>ALL TIME</h2>
-              <h3>£4,000</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <div class="column">
-      <div class="flex-row">
-        <div class="background-card-small">
-          <div class="card-title">
-            <h2>Biggest Risers</h2>
-            <hr class="line">
-          </div>
-          <table class="table">
-            <tbody>
-              <tr>
-                <th scope="row">Marcus Rashford</th>
-                <td>£1600</td>
-              </tr>
-              <tr>
-                <th scope="row">Mason Greenwood</th>
-                <td>£2000</td>
-              </tr>
-              <tr>
-                <th scope="row">Cristiano Ronaldo</th>
-                <td>£400</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="background-card-small">
-          <p>hi</p>
-        </div>
-      </div>
-    </div>
-  <div class="column">
-    <div class="background-card">
-      <div id="bar-chart"></div>
-    </div>
-  </div>
-</div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
 
 
+        </div>
+        <!-- END wrapper -->
+
+
+        @@include('./partials/right-sidebar.html')
+
+
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+    </body>
+</html>
