@@ -60,7 +60,7 @@ a {
 // main content
 .cd-main-content {
   @include breakpoint(md) {
-    padding-top: (var(--cd-header-height) - 10px);
+    padding-top: var(--cd-header-height);
     display: grid;
     grid-template-columns: var(--cd-sidebar-width) 1fr;
     min-height: 100vh;
