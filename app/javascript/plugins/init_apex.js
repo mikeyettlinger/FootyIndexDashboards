@@ -10,7 +10,8 @@ var xdataArray = document.getElementById('x-axis').dataset.values.slice(1, -1).s
     title: {
     text: 'Profit Over Time',
     align: 'center',
-    fontSize: '32px',
+    fontSize: '2vw',
+    margin: 20,
     color: '#010F37'
     },
     colors: ['#60CDF3', '#2F3C55'],
@@ -68,7 +69,8 @@ var xdataArray = document.getElementById('x-axis').dataset.values.slice(1, -1).s
           title: {
           text: 'Dividends Over Time',
           align: 'center',
-          fontSize: '32px',
+          fontSize: '2vw',
+          margin: 20,
           color: '#010F37'
           },
           dataLabels: {

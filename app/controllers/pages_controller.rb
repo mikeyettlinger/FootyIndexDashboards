@@ -2,7 +2,6 @@ class PagesController < ApplicationController
 
 def index
   require 'csv'
-
   csv_options = { col_sep: ' ' }
 
   dirname = File.basename(Dir.getwd)
@@ -18,5 +17,8 @@ def index
   @xaxis
   @yaxis
   end
-
 end
+
+def portfolio
+end
+

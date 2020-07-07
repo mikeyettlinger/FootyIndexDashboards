@@ -44,16 +44,12 @@
   <main class="cd-main-content">
      <nav class="cd-side-nav js-cd-side-nav">
         <ul class="cd-side__list js-cd-side__list">
-           <li class="cd-side__label"><span>Main</span></li>
-           <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children">
-              <a href="#0">Overview</a>
-              <a href="">Dashboard</a>
-              <a href="">Portfolio</a>
-          </li>
-
+          <li class="cd-side__label"><span>Main</span></li>
+          <li class="cd-side__item cd-side__item--has-children cd-side__item--overview js-cd-item--has-children"></li>
           <li class="cd-side__item cd-side__item--has-children cd-side__item--notifications cd-side__item--selected js-cd-item--has-children">
               <ul class="cd-side__sub-list">
-                 <li class="cd-side__sub-item"><a href="#0">All Notifications</a></li>
+                <li><%= link_to "Dashboard", root_path, class: "cd-side-item"%></li>
+                <li><%= link_to "Portfolio", portfolio_path, class: "cd-side__sub-item"%></li>
                  <!-- other list items here -->
               </ul>
           </li>
