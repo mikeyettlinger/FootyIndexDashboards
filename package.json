@@ -6,7 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "apexcharts": "^3.19.3",
+    "apexcharts": "^3.24.0",
     "bootstrap": "^4.5.0",
     "codyhouse-framework": "^2.7.4",
     "jquery": "^3.5.1",
